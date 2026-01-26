@@ -1,0 +1,346 @@
+/* Root Colors - Green, Beige, Purple Theme */
+:root {
+    --primary-green: #2d6a4f;
+    --light-green: #52b788;
+    --accent-green: #74c69d;
+    --beige: #d4a574;
+    --light-beige: #e8d5c4;
+    --purple: #6f42c1;
+    --dark-purple: #5a32a3;
+    --light-purple: #a78bdb;
+    --text-dark: #2d2d2d;
+    --text-light: #f5f5f5;
+    --border-color: #ddd;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-green);
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-purple) 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+                                                
+
+
+     r      r      r      r      flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--beige);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    l    l    l    l    l gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--beige);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--light-purple) 100%);
+    color: var(--text-light);
+    padding: 120px 20px;
+    text-align: center;
+    min-heig    min-h;
+    display: flex;
+    align-items: ce    align-items: ce    aligcenter;
+}}}}}}}}}}}}tent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-    ma: 2rem;
+}
+
+................................... var(--beige);
+                         green);
+    padd    padd    padd    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: b    font-weansition: all 0.3s ease;
+}
+
+.cta-button:hover.cta-button:hover.cta-r: #c9925f;
+    transform: translateY    transform: translateY    transfrgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    padding: 80polor:     padding: 80polor:     pad-content {
+    max-width: 8    max-width: n: 0 auto;
+}
+
+.about-text p {
+    font-s    font-s    font-s    font-s    font-s    font-s    font-s    font-s    font-s    font S    font-s    font-s    fontpa    font-s    font-s   ac    font-s    font-s  
+
+
+   font-s    font- dis   font-s       gri   font-s    font- dis   font-s       gri   font-, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    bac    bac    bac    bac    bac    bac    bac t-beige) 0%, #f0e6db 100%);    bac    bac    bac   border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+                         d var(--p                         d var(--p          t               lateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,    box-shadow: 0 10px 25px rgba(0,    box-shadow: 0  mar    box-shadow: 0 10px 25px rgba(0,    box-shador:     box-shadow: 0 10px 25px rgba(0,    box-shadow: 0 10px 25px rgba(0,    box-block;
+    margin: 2rem auto;
+                          di                          di                          di    );                          di            ng: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.view-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* AR Section */
+.ar-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--light-purple) 100%);
+    color: var(--text-light);
+}
+
+.ar-section h2 {
+    color: var(--text-light);
+}
+
+.ar-content {
+    d    d    d    d    rid-template-columns: 1fr 1fr;
+    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g    g
+}
+
+.ar-button {
+    background-color: var(--beige);
+    color: var(--primary-green);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.ar-button:hover {
+                                                                                                                                                   px dashed var(--text-light);
+    padding: 4r    padding: 4r     c    padding: 4r    p: 2    padding: 4r    padding: ;
+    display: flex;
+    al    al    al    al    alusti    al    al    al    al    alusti    apx;
+}
+
+@med@med@med@med@: 76@med@med@medar-content {
+        grid-        grid-        grid-        grid-        grid-        grid-        grid-        grx;        grid-        grid-  
+}
+
+................  ................  .......... 2rem auto;
+    bac    bac    bac    bac    bac    bac    bac    bac     0%, var(--dark-purple) 100%);
+    color: var(--text-light);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.game-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: var(--light-beige);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.game-container.hidden {
+    display: none;
+}
+
+.game-content h3 {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-button {
+    background-color: var(--accent-green);
+    color: var(--text-light);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    tr    tr    tr    tr    tr    tr    tr    tr    tr    trion-button:hover {
+    background-color: var(--light-green);
+    transform: translateX(5px);
+}
+}
+  transform: translateX(
+    background-color: var(--beige);
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.game-stats {
+    display: flex;
+              ntent: sp              ntent: sp   ht              ntent: sp              ntent: /* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--light-beige) 0%, #f0e6db 10    background: linear-t {
+                       gri                 s: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+           rection: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 2px solid var(--primary-green);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form tex.contact-form tex.cut.contact-form tex.contact-form tex.cut.contact-form tex.contact-form tex.crgba(.contact-form tex.contact-form tex.cut.c  .contact-form tex.contact-fnt(135deg.contact-form tex.con) 0%.contact-form tex.contact-form texlo.contact-form tex.contact-fadding.contact-form tex.contact-form tex.cutder-radius: 5px;
+            pointer;
+            pointer;
+tact-form tex.cut.contact-form tex.contact-form tex.cut.contact-form tex.contact-form tex.crg   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    background-color: var(--light-purple);
+    padding: 2rem;
+    border-    border-    border-r: var(--text-light);
+}
+
+.contact-info p {
+    m    m    m    m    m 
+
+
+   m   links {
+    dis    dis    dis  gap: 1rem;
+    marg    marg    m
+}
+
+.social-link {
+    color: var    color: var    c t    color: var    ne;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radiu    border-radiu    bo: al    border-radiu   cial-link:hover {
+    background-color: var(--beige);
+    color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+.footer {
+.footer ground-color:.foot--primary-green);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
