@@ -15,26 +15,21 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          # Install Docker and Git if missing (basic check)
-          if ! command -v docker &> /dev/null; then
-              apt-get update && apt-get install -y docker.io git
+          # Install Git if missing
+          if ! command -v git &> /dev/null; then
+              apt-get update && apt-get install -y git
           fi
 
-          # Setup directory
-          mkdir -p /opt/site-crocorobo
-          
-          # Clone or Pull
-          if [ ! -d "/opt/site-crocorobo/.git" ]; then
-            git clone https://github.com/${{ github.repository }}.git /opt/site-crocorobo
+          # Deploy into /var/www
+          mkdir -p /var/www
+
+          if [ ! -d "/var/www/.git" ]; then
+            cd /var/www
+            git init
+            git remote add origin https://github.com/${{ github.repository }}.git
           else
-            cd /opt/site-crocorobo
-            git pull
+            cd /var/www
           fi
-          
-          cd /opt/site-crocorobo
-          
-          # Build and Run
-          docker build -t site-crocorobo .
-          docker stop site-web || true
-          docker rm site-web || true
-          docker run -d --name site-web -p 80:80 --restart unless-stopped site-crocorobo
+
+          git fetch --all
+          git reset --hard origin/main
