@@ -1,0 +1,13 @@
+{
+  "name": "site-crocorobo",
+  "version": "1.0.0",
+  "description": "CROCOROBO Robotics Team Project Website",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": ["robotics", "crocorobo"],
+  "author": "SandorRai",
+  "license": "MIT"
+}
