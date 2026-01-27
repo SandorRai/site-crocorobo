@@ -26,8 +26,9 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Mabook', 'Comic Sans MS', cursive, sans-serif;
+h1, h2, h3, h4, h5, h6,
+.section-title {
+    font-family: 'Mabook', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
@@ -67,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
     color: var(--bg-color);
     text-decoration: none;
     font-size: 1.2rem;
@@ -212,6 +214,7 @@ footer {
 /* Buttons */
 .btn {
     display: inline-block;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
     background-color: var(--highlight-color);
     color: #fff;
     padding: 10px 25px;
