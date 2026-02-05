@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proiect de Inovație - CROCOROBO</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -36,32 +37,54 @@
     </section>
 
     <!-- Detailed Project Section -->
-    <section style="background-color: #fff; padding-top: 40px;">
+    <section>
         <div class="container">
             <h2 class="section-title">Inovație pentru Comunitate</h2>
 
-            <div style="background-color: #f1f6da; padding: 30px; border-radius: 20px; border: 3px solid #6eb440; margin-bottom: 40px;">
-                <h3 style="color: #2d6a4f;">🎯 Obiectivele Noastre</h3>
-                <ul style="list-style-type: none; padding-left: 0; font-size: 1.1rem;">
-                    <li style="margin-bottom: 10px;">🔍 <strong>Cercetare:</strong> Înțelegerea descoperirilor de la Medieșu Aurit.</li>
-                    <li style="margin-bottom: 10px;">⚠️ <strong>Problemă reală:</strong> Situl are nevoie de protecție și promovare.</li>
-                    <li>💡 <strong>Soluție inovatoare:</strong> Tehnologie pentru educație și protejarea patrimoniului.</li>
-                </ul>
-            </div>
-
-            <div class="team-content">
-                <div class="team-text">
-                    <h3>Cum funcționează soluția noastră?</h3>
-                    <p>Am combinat mai multe idei inovatoare:</p>
-                    <br>
-                    <p><strong>1. Realitate Augmentată (AR):</strong> O aplicație care permite vizitatorilor să vadă cuptoarele dacice așa cum arătau ele în trecut, direct pe telefon!</p>
-                    <br>
-                    <p><strong>2. Joc Educativ:</strong> "Devino arheolog la Medieșu Aurit" - copiii învață istorie distrându-se.</p>
-                    <br>
-                    <p><strong>3. Monitorizare Inteligentă:</strong> Un prototip cu senzori de umiditate și vibrații care alertează dacă situl este în pericol.</p>
+            <div class="info-card">
+                <div class="objectives-box">
+                    <h3>🎯 Obiectivele Noastre</h3>
+                    <ul>
+                        <li>🔍 <strong>Cercetare:</strong> Înțelegerea descoperirilor de la Medieșu Aurit.</li>
+                        <li>⚠️ <strong>Problemă reală:</strong> Situl are nevoie de protecție și promovare.</li>
+                        <li>💡 <strong>Soluție inovatoare:</strong> Tehnologie pentru educație și protejarea patrimoniului.</li>
+                    </ul>
                 </div>
-                <div class="team-image">
-                    <img src="https://placehold.co/500x500/853eb4/fff?text=Model+AR+%26+Senzori" alt="Solutie Inovatoare" style="border-radius: 20px; border: 5px solid #1d2e36;">
+
+                <div class="team-content">
+                    <div class="team-text">
+                        <h3>Cum funcționează soluția noastră?</h3>
+                        <p>Am combinat mai multe idei inovatoare:</p>
+                        <br>
+                        <p><strong>1. Realitate Augmentată (AR):</strong> O aplicație care permite vizitatorilor să vadă cuptoarele dacice așa cum arătau ele în trecut, direct pe telefon!</p>
+                        <br>
+                        <p><strong>2. Joc Educativ:</strong> "Devino arheolog la Medieșu Aurit" - copiii învață istorie distrându-se.</p>
+                        <br>
+                        <p><strong>3. Monitorizare Inteligentă:</strong> Un prototip cu senzori de umiditate și vibrații care alertează dacă situl este în pericol.</p>
+                    </div>
+                    <div class="team-image">
+                        <div class="ar-card">
+                            <model-viewer
+                                id="ar-model-cuptor"
+                                class="model-viewer"
+                                src="assets/cuptor3D.glb"
+                                ios-src="assets/cuptor3D.usdz"
+                                alt="Model 3D cuptor dacic"
+                                camera-controls
+                                camera-orbit="0deg 75deg 1.6m"
+                                field-of-view="25deg"
+                                auto-rotate
+                                ar
+                                ar-modes="scene-viewer webxr quick-look"
+                                ar-scale="auto"
+                                shadow-intensity="1"
+                                exposure="1">
+                                <div slot="ar-button" style="display: none;"></div>
+                                <div class="ar-fallback" slot="poster">Incarcare model...</div>
+                            </model-viewer>
+                            <button class="ar-button" id="ar-view-btn">Vezi in AR</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,5 +99,19 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modelViewer = document.getElementById('ar-model-cuptor');
+            const arBtn = document.getElementById('ar-view-btn');
+
+            arBtn.addEventListener('click', () => {
+                if (modelViewer.canActivateAR) {
+                    modelViewer.activateAR();
+                } else {
+                    alert('Funcția AR nu este disponibilă pe acest dispozitiv. Te rugăm să încerci de pe un telefon mobil compatibil (iPhone sau Android).');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

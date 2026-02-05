@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Mabook';
-    src: url('../assets/mabook.ttf') format('truetype');
+    src: url('../fonts/Mabook.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -117,8 +117,8 @@ section {
     margin-top: 20px;
 }
 
-/* About Team */
-.about-team {
+/* About Team & Generic Info Card */
+.about-team, .info-card {
     background-color: #fff;
     border-radius: 30px;
     padding: 40px;
@@ -126,9 +126,33 @@ section {
     border: 3px solid var(--main-color);
 }
 
+.objectives-box {
+    background-color: #f1f6da;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #6eb440;
+    margin-bottom: 40px;
+}
+
+.objectives-box h3 {
+    color: #2d6a4f;
+    margin-bottom: 15px;
+}
+
+.objectives-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+.objectives-box li {
+    margin-bottom: 10px;
+}
+
+
 .team-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -143,10 +167,66 @@ section {
     text-align: center;
 }
 
-.team-image img {
-    max-width: 100%;
+/* AR Model Card */
+.ar-card {
+    background-color: var(--highlight-color);
+    padding: 10px;
     border-radius: 20px;
-    border: 5px solid var(--highlight-color);
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the button */
+}
+
+.model-viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 700px; /* Increased min-height to match container */
+    flex: 1; /* Grow to fill the flex container */
+    margin: 0;
+    display: block;
+    background: transparent;
+    border-radius: 12px;
+    border: none;
+}
+
+.ar-button {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    background-color: #fff; /* White background to stand out on purple */
+    color: var(--highlight-color); /* Purple text */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    margin: 10px 0; /* Add margin to separate from model */
+}
+
+.ar-button:active {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    transform: translateY(3px);
+}
+
+.ar-fallback {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.ar-note {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
 }
 
 /* Current Season */
