@@ -1,0 +1,29 @@
+name: Deploy to DigitalOcean Droplet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Navigate to the project directory (Change this path if needed)
+            cd ~/site-crocorobo
+            
+            # Pull the latest changes
+            git pull origin main
+            
+            # Rebuild and restart the container
+            docker build -t site-crocorobo .
+            docker stop site-crocorobo || true
+            docker rm site-crocorobo || true
+            docker run -d --restart unless-stopped --name site-crocorobo -p 80:80 site-crocorobo
