@@ -24,6 +24,40 @@ cat ~/.ssh/id_ed25519.pub
 # -> Mergi pe GitHub la Repository > Settings > Deploy keys > Add deploy key
 # -> Pune un titlu (ex: Droplet) și lipește cheia. Bifează "Allow write access" dacă e nevoie (pentru pull nu e obligatoriu, dar ajută).
 
+# VERIFICARE ÎNAINTE DE CLONE:
+# Rulează comanda asta pentru a testa dacă GitHub te recunoaște:
+ssh -T git@github.com
+
+# 🔴 EROARE "PERMISSION DENIED"? URMEAZĂ ACEȘTI PAȘI:
+# 1. Asigură-te că cheia există. Rulează:
+#    ls -la ~/.ssh/
+#    (Trebuie să vezi fișierele: id_ed25519 și id_ed25519.pub)
+#
+# 2. Dacă NU există, generează-le din nou (apasă Enter la tot):
+#    ssh-keygen -t ed25519 -C "droplet-deploy"
+#
+# 3. Afișează cheia publică:
+#    cat ~/.ssh/id_ed25519.pub
+#
+# 4. Copiază TOT textul afișat (de la "ssh-ed25519" până la sfârșit).
+#
+# 5. Mergi pe GitHub la Repository -> Settings -> Deploy Keys.
+#    🔴 NOTĂ IMPORTANTĂ: Trebuie să fii Proprietarul (SandorRai) sau Admin pentru a vedea "Settings".
+#    - Dacă ești "moldluca" și nu vezi tab-ul "Settings" la acest proiect:
+#      1. Copiază cheia publică generată mai sus.
+#      2. Trimite-i cheia lui SandorRai.
+#      3. Roagă-l să o adauge la "Settings > Deploy Keys".
+#
+#    - Dacă ai acces la Settings:
+#      - Apasă "Add deploy key".
+#      - Paste la cheie.
+#      - Bifează "Allow write access" (opțional, dar recomandat pt simplitate).
+#      - Apasă "Add key".
+#
+# 6. Testează din nou:
+#    ssh -T git@github.com
+#    (Acum ar trebui să zică "Hi SandorRai!...")
+
 # 3. Clonează repository-ul folosind SSH
 git clone git@github.com:SandorRai/site-crocorobo.git
 
