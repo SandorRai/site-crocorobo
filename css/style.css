@@ -13,6 +13,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('../fonts/ComicSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +27,7 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', Verdana, Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -28,7 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .section-title {
-    font-family: 'Mabook', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-family: 'Mabook', 'Comic Sans MS', 'Comic Sans', Verdana, Arial, sans-serif;
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
@@ -68,7 +75,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-menu a {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', Verdana, Arial, sans-serif;
     color: var(--bg-color);
     text-decoration: none;
     font-size: 1.2rem;
