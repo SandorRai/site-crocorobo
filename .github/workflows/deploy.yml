@@ -15,21 +15,6 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          # Install Git if missing
-          if ! command -v git &> /dev/null; then
-              apt-get update && apt-get install -y git
-          fi
-
-          # Deploy into /var/www
-          mkdir -p /var/www
-
-          if [ ! -d "/var/www/.git" ]; then
-            cd /var/www
-            git init
-            git remote add origin https://github.com/${{ github.repository }}.git
-          else
-            cd /var/www
-          fi
-
+          cd /var/www/crocorobo
           git fetch --all
           git reset --hard origin/main
